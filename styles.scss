@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	// font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+	font-family: "Source Code Pro";
+	background: var(--main-background-color);
+	font-size: 10px;
+	color: var(--main-text-color);
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 4rem;
+}
+
+footer {
+	color: #ffffff;
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+	font-size: 1.2rem;
+}
+
+.container {
+	background-color: #000000;
+
+	#contact {
+		color: #ffffff;
+		position: absolute;
+		top: calc(50% + 100px);
+		right: 40px;
+		font-size: 1.6rem;
+		text-align: right;
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 5px;
+			&:hover {
+				background: #ffffff;
+				color: #000000;
+			}
+		}
+	}
+
+	#about {
+		color: #000000;
+		position: absolute;
+		bottom: calc(50% + 100px);
+		right: 40px;
+		font-size: 1.6rem;
+		text-align: right;
+		max-width: 300px;
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 5px;
+			&:hover {
+				background: #ffffff;
+				color: #000000;
+			}
+		}
+	}
+
+	.social-links {
+		position: absolute;
+		top: 50%;
+		right: 40px;
+		transform: translateY(calc(-50% + 5px));
+
+		ul {
+			li {
+				display: block;
+				.facebook {
+					fill: #000000;
+				}
+				.insta {
+					fill: #ffffff;
+				}
+				svg {
+					height: 75px;
+					width: 75px;
+				}
+			}
+		}
+	}
+	#logo {
+		height: 100vh;
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		line-height: 0;
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 1) 50%,
+			rgba(255, 255, 255, 1) 50%,
+			rgba(255, 255, 255, 1) 100%
+		);
+		text-align: center;
+
+		.player {
+			position: relative;
+			margin: auto;
+			max-width: 100vh;
+			.record {
+				height: 100vh;
+				max-width: 100%;
+				animation: spinrecord 30s linear infinite;
+				mix-blend-mode: difference;
+			}
+			.record-arm {
+				position: absolute;
+				height: 100vh;
+				max-width: 100%;
+				top: 0rem;
+				left: 0;
+			}
+		}
+	}
+}
+@keyframes spinrecord {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spinbg {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	html {
+		font-size: 8px;
+	}
+
+	.social-links {
+		ul {
+			li {
+				margin: 200px 0;
+			}
+		}
+	}
+
+	.container {
+		#about {
+			top: 40px;
+		}
+
+		#contact {
+			bottom: 70px !important;
+			top: auto;
+		}
+	}
+
+	// .container {
+	// 	transform: rotate(90deg);
+	// 	#about,
+	// 	#contact {
+	// 		transform: rotate(-90deg);
+	// 	}
+	// }
+
+	// .social-links {
+	// 	ul {
+	// 		li {
+	// 			transform: rotate(-90deg);
+	// 		}
+	// 	}
+	// }
+
+	// #logo {
+	// 	height: 100vw !important;
+	// 	width: 100vh !important;
+
+	// 	.player {
+	// 		max-width: 100vh !important;
+	// 		.record {
+	// 			height: 100vh !important;
+	// 		}
+	// 		.record-arm {
+	// 			height: 100vh !important;
+	// 		}
+	// 	}
+	// }
+}
