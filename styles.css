@@ -27,7 +27,7 @@ footer {
 
 .container {
   display: grid;
-  grid-template-areas: "contact contact" "logo logo" "social about";
+  grid-template-areas: "contact contact" "logo logo" "social about" "footer footer";
   opacity: 0;
   animation: bodyfadein 3s ease-out forwards;
 }

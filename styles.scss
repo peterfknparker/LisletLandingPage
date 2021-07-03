@@ -27,6 +27,9 @@ footer {
 	font-size: 1.2rem;
 	padding: 0 0 3rem 3rem;
 	background-color: #000000;
+	// position: absolute;
+	// bottom: 0;
+	// left: 0;
 }
 
 .container {
@@ -36,7 +39,8 @@ footer {
 	grid-template-areas:
 		"contact contact"
 		"logo logo"
-		"social about";
+		"social about"
+		"footer footer";
 
 	// grid-auto-rows: 1fr;
 
