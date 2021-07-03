@@ -156,11 +156,20 @@ footer {
   }
 
   #logo {
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100vh;
+    width: 100%;
     padding: 0 !important;
+  }
+  #logo .player {
+    max-width: 100vh;
+  }
+  #logo .player .record {
+    height: 100vh;
+    max-width: 100%;
+  }
+  #logo .player .record-arm {
+    height: 100vh;
+    max-width: 100%;
   }
 
   #about,
