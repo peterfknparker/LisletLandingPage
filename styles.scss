@@ -34,7 +34,7 @@ footer {
 
 .container {
 	// padding: 5rem;
-
+	min-height: 50rem;
 	display: grid;
 	grid-template-areas:
 		"contact contact"
@@ -193,7 +193,8 @@ footer {
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
 			"logo contact"
-			"logo about";
+			"logo about"
+			"footer footer";
 		overflow: hidden;
 		background: linear-gradient(
 			0deg,
@@ -206,20 +207,27 @@ footer {
 
 	#logo {
 		height: 100vh;
+		min-height: 50rem;
 		width: 100%;
+		min-width: 50rem;
 		// position: absolute;
 		// top: 50%;
 		// transform: translateY(-50%);
 		padding: 0 !important;
 		.player {
 			max-width: 100vh;
+			min-width: 50rem;
 			.record {
 				height: 100vh;
+				min-height: 50rem;
+				min-width: 50rem;
 				max-width: 100%;
 			}
 			.record-arm {
 				height: 100vh;
+				min-height: 50rem;
 				max-width: 100%;
+				min-width: 50rem;
 			}
 		}
 	}
@@ -229,11 +237,13 @@ footer {
 		height: 50vh !important;
 		padding: 0 !important;
 		position: relative;
+		min-height: 25rem;
 	}
 	#contact p {
 		position: absolute;
 		right: 10rem;
 		bottom: 10rem;
+		z-index: 40;
 	}
 
 	#about p {
@@ -243,10 +253,26 @@ footer {
 	}
 
 	.social-links {
+		min-height: 50rem;
+		height: 100%;
 		position: absolute;
-		top: 50%;
+		display: flex !important;
+		align-content: center !important;
+		flex-wrap: wrap;
+		padding: 0 !important;
+		width: 6rem;
+		ul {
+			margin-top: 2rem;
+			padding: 0 !important;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 6rem;
+		}
+		// top: 50%;
+		top: 0;
 		right: 5rem;
-		transform: translateY(calc(-50% + 20px));
+		// transform: translateY(calc(-50% + 20px));
 		background: none !important;
 		z-index: 20;
 		.facebook {
@@ -254,8 +280,10 @@ footer {
 		}
 	}
 	footer {
-		position: absolute;
-		bottom: 0rem;
-		left: 0rem;
+		// position: absolute;
+		// bottom: 0rem;
+		// left: 0rem;
+		// background: none;
+		margin-top: -5rem;
 	}
 }
